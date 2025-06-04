@@ -1,5 +1,11 @@
 <html>
   <body>
-    <%= message %>
+    <div><%= title %></div>
+    <% for(let i = 0; i < messages.length; i++) { %>
+      <div><%= messages[i]["text"]  %></div>
+      <div><%= messages[i]["user"]  %></div>
+      <div><%= messages[i]["added"]  %></div>
+    <% } %>
+    <button onclick="location.href='/new'" type="button">New Message</button>
   </body>
 </html>
